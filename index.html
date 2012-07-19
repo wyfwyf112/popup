@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<script language="javascript" type="text/javascript">
+
+function popitup(url) {
+	newwindow=window.open(url,'name','height=600,width=800');
+	if (window.focus) {newwindow.focus()}
+	return false;
+}
+
+function popup(){
+var pop=document.getElementById("pop-chart");
+var link=pop.getElementsByTagName("a");
+for(i=0;i<link.length;i++){
+link[i].onclick=function(){
+popitup(this.getAttribute("href"));
+return false;
+}
+}
+}
+
+window.onload=popup
+
+
+
+</script>
+</head>
+<body>
+<div id="pop">
+<a href="popupex.html">Link to popup</a>
+
+</div>
+</body>
+</html>
